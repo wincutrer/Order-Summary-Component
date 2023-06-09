@@ -1,0 +1,284 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+  
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+  }
+  
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html,
+body {
+  font-family: "Red Hat Display", sans-serif;
+  height: 100%;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 325px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+
+  background-image: url('./images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--pale-blue);
+}
+
+.main {
+  background: white;
+  width: 20.438rem;
+  height: 35.438rem;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  font-size: 1rem;
+  color: var(--desaturated-blue);
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+}
+
+.plan-container {
+  display: flex;
+  justify-content: center;
+}
+
+.plan-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17.438rem;
+    height: 5.063rem;
+    background: #F7F9FF;
+    border-radius: 0.688rem;
+}
+
+.plan-text {
+  margin-right: 3.125rem;
+  font-size: 0.875rem;
+}
+
+.price {
+  margin-top: 3px;
+}
+
+.music-circle {
+  margin-right: 1.25rem;
+}
+
+p.subhead {
+  font-weight: 500;
+  font-size: 0.938rem;
+  line-height: 1.563rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  width: 16.438rem;
+}
+
+h1 {
+  font-size: 1.375rem;
+  margin: 32px 32px 16px 32px;
+}
+
+.change-plan {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.813rem;
+  line-height: 1.063rem;
+  text-decoration-line: underline;
+}
+
+.change-plan:hover {
+  color: #766CF1;
+}
+
+.change-plan:active {
+  color: #776cf1d0;
+}
+
+button {
+  background: #382ae1;
+  color: white;
+  border: none;
+  width: 17.438rem;
+  height: 3.125rem;
+  margin: 1.5rem;
+  border-radius: 11px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.938rem;
+  line-height: 1.25rem;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+}
+
+button:hover {
+  background: #766CF1;
+}
+
+button:active {
+  background: #776cf1d0;
+}
+
+.cancel-plan {
+  color: var(--desaturated-blue);
+  font-weight: 900;
+  font-size: 0.938rem;
+  line-height: 1.25rem;
+  text-decoration-line: none;
+}
+
+.cancel-plan:hover {
+  color: var(--dark-blue);
+}
+
+.cancel-plan:active {
+  color: hsla(224, 23%, 55%, 0.561)
+}
+
+.fw-900-db {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.bright-blue {
+  color: var(--bright-blue);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.attribution {
+  font-size: 0.688rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/* media queries */
+
+@media (min-width: 450px) {
+  body {
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .main {
+    width: 28.125rem;
+    height: 43.563rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  p.subhead {
+    font-size: 1rem;
+    width: 354px;
+  }
+
+  .plan-box {
+    width: 354px;
+    height: 98px;
+  }
+
+  .plan-text {
+    margin-right: 94px;
+    font-size: 1rem;
+  }
+
+  .price {
+    margin-top: 6px;
+  }
+
+  .change-plan {
+    font-size: 0.875rem;
+  }
+
+  button {
+    width: 354px;
+    height: 50px;
+  }
+
+
+}
+
